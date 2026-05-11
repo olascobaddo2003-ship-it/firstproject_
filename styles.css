@@ -210,8 +210,10 @@ body {
     opacity: 0;
     transform: translateY(32px);
     animation: revealLetter 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    color: transparent;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 @keyframes revealLetter {

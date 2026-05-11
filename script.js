@@ -10,18 +10,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 function animateHeroName() {
-    const heroName = document.querySelector('.gradient-text');
-    if (!heroName) return;
+    const heroNames = document.querySelectorAll('.gradient-text');
+    if (!heroNames.length) return;
 
-    const text = heroName.textContent.trim();
-    heroName.textContent = '';
-    heroName.classList.add('animated-text');
+    heroNames.forEach((heroName, elementIndex) => {
+        const text = heroName.textContent.trim();
+        heroName.textContent = '';
+        heroName.classList.add('animated-text');
 
-    text.split('').forEach((char, index) => {
-        const span = document.createElement('span');
-        span.innerHTML = char === ' ' ? '&nbsp;' : char;
-        span.style.animationDelay = `${0.3 + index * 0.06}s`;
-        heroName.appendChild(span);
+        text.split('').forEach((char, index) => {
+            const span = document.createElement('span');
+            span.innerHTML = char === ' ' ? '&nbsp;' : char;
+            span.style.animationDelay = `${0.3 + (elementIndex * 0.3) + index * 0.06}s`;
+            heroName.appendChild(span);
+        });
     });
 }
 
@@ -53,7 +55,7 @@ const observer = new IntersectionObserver(function(entries) {
 }, observerOptions);
 
 // Observe cards and sections
-document.querySelectorAll('.service-card, .stat-card, .info-card').forEach(el => {
+document.querySelectorAll('.service-card, .stat-card, .info-card, .timeline-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

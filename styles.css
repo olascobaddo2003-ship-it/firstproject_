@@ -5,13 +5,13 @@
 }
 
 :root {
-    --primary-color: #FF6B6B;
-    --secondary-color: #4ECDC4;
-    --accent-color: #FFE66D;
-    --dark-color: #2C3E50;
-    --light-color: #ECF0F1;
-    --gradient-1: linear-gradient(135deg, #FF6B6B 0%, #FFE66D 100%);
-    --gradient-2: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+    --primary-color: #4F46E5;
+    --secondary-color: #06B6D4;
+    --accent-color: #F59E0B;
+    --dark-color: #1F2937;
+    --light-color: #F9FAFB;
+    --gradient-1: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
+    --gradient-2: linear-gradient(135deg, #06B6D4 0%, #F59E0B 100%);
     --transition: all 0.3s ease;
 }
 
@@ -22,7 +22,7 @@ html {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--dark-color);
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -108,7 +108,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 50%, #F59E0B 100%);
     padding: 100px 20px;
     min-height: 100vh;
     display: flex;
@@ -202,12 +202,12 @@ body {
 
 .social-card {
     width: 280px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(79, 70, 229, 0.2);
     border-radius: 28px;
     padding: 2rem;
     text-align: center;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 60px rgba(79, 70, 229, 0.15);
     backdrop-filter: blur(10px);
 }
 
@@ -304,7 +304,7 @@ body {
 }
 
 .skill-tag {
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(78, 205, 196, 0.1));
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(6, 182, 212, 0.1));
     padding: 8px 16px;
     border-radius: 25px;
     border-left: 3px solid var(--primary-color);
@@ -319,7 +319,7 @@ body {
 }
 
 .stat-card {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
@@ -349,7 +349,7 @@ body {
 /* Services Section */
 .services {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
     color: var(--dark-color);
 }
 
@@ -419,7 +419,7 @@ body {
 }
 
 .info-card {
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(78, 205, 196, 0.1));
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(6, 182, 212, 0.1));
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
@@ -516,7 +516,7 @@ body {
 /* Footer */
 .footer {
     background: var(--dark-color);
-    color: white;
+    color: #E5E7EB;
     text-align: center;
     padding: 2rem 20px;
 }

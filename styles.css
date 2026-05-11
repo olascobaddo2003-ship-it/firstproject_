@@ -549,18 +549,20 @@ body {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
         text-align: center;
+        line-height: 1.1;
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         text-align: center;
     }
 
     .hero-description {
         max-width: 100%;
         text-align: center;
+        font-size: 1rem;
     }
 
     .hero-image {
@@ -570,6 +572,15 @@ body {
     .cta-buttons {
         justify-content: center;
         flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        font-size: 1.05rem;
+        padding: 14px 24px;
     }
 
     .about-content {
@@ -578,7 +589,7 @@ body {
     }
 
     .about-stats {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .services-grid {
@@ -595,19 +606,13 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .btn {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 0.5rem;
-    }
-
     .section-title {
         font-size: 2rem;
     }
 
     .social-card {
         width: 100%;
-        max-width: 280px;
+        max-width: 100%;
         margin: 0 auto;
     }
 }

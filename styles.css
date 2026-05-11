@@ -440,6 +440,44 @@ body {
     display: block;
 }
 
+.email-copy {
+    display: grid;
+    gap: 0.75rem;
+    align-items: start;
+}
+
+.copy-instruction {
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.copy-btn {
+    padding: 0.85rem 1rem;
+    border-radius: 999px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.copy-btn:hover {
+    transform: translateY(-2px);
+    background: #4338CA;
+}
+
+.copy-feedback {
+    color: #0F172A;
+    font-size: 0.92rem;
+    min-height: 1.2rem;
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
 .info-card h4 {
     margin-bottom: 0.5rem;
     color: var(--dark-color);

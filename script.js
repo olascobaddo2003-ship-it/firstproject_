@@ -9,6 +9,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+function animateHeroName() {
+    const heroName = document.querySelector('.gradient-text');
+    if (!heroName) return;
+
+    const text = heroName.textContent.trim();
+    heroName.textContent = '';
+    heroName.classList.add('animated-text');
+
+    text.split('').forEach((char, index) => {
+        const span = document.createElement('span');
+        span.innerHTML = char === ' ' ? '&nbsp;' : char;
+        span.style.animationDelay = `${0.3 + index * 0.06}s`;
+        heroName.appendChild(span);
+    });
+}
+
+window.addEventListener('DOMContentLoaded', animateHeroName);
+
 // Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');

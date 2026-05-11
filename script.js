@@ -58,6 +58,22 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
+// Copy email action
+const copyButtons = document.querySelectorAll('.copy-btn');
+copyButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+        const email = button.dataset.copy;
+        try {
+            await navigator.clipboard.writeText(email);
+            const feedback = button.closest('.email-copy').querySelector('.copy-feedback');
+            feedback.textContent = 'Email copied to clipboard';
+            setTimeout(() => { feedback.textContent = ''; }, 2500);
+        } catch (error) {
+            alert('Unable to copy email. Please copy it manually: ' + email);
+        }
+    });
+});
+
 // Add active state to nav links based on scroll position
 window.addEventListener('scroll', () => {
     let current = '';
